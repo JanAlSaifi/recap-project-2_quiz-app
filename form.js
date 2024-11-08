@@ -48,6 +48,23 @@ newCardSubmit.addEventListener("click", (event) => {
   liElementTag.textContent = newCardTag.value;
 });
 
-const maxLengthTextArea = document.querySelector(
-  '[data-js="maxlength-textarea"]'
+const maxLengthTextAreaQuestion = document.querySelector(
+  '[data-js="maxlength-textarea-question"]'
 );
+
+const maxLengthTextAreaAnswer = document.querySelector(
+  '[data-js="maxlength-textarea-answer"]'
+);
+
+function calculateLeftSpaceQuestion(event) {
+  const sum = 150 - event.target.value.length;
+  maxLengthTextAreaQuestion.textContent = `${sum} characters are left.`;
+}
+
+function calculateLeftSpaceAnswer(event) {
+  const sum = 150 - event.target.value.length;
+  maxLengthTextAreaAnswer.textContent = `${sum} characters are left.`;
+}
+
+newCardQuestion.addEventListener("input", calculateLeftSpaceQuestion);
+newCardAnswer.addEventListener("input", calculateLeftSpaceAnswer);
