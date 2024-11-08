@@ -13,130 +13,18 @@
       <h1 class="header__title">Quiz-App</h1>
     </header>
     <main>
-      <ul class="card-list">
-        <!--
-                FIRST CARD
-              -->
-        <li class="card-list__item">
-          <article class="card">
-            <h2 class="card__question">
-              In the Kingdom Heart series who provides the english voice for
-              Master Eraqus?
-            </h2>
-            <button
-              class="card__button-answer"
-              type="button"
-              data-js="cardToogle"
-            >
-              Show answer
-            </button>
-            <p class="card__answer" data-js="cardAnswer">Mark Hamill</p>
-            <ul class="card__tag-list">
-              <li class="card__tag-list-item">#kingdomheart</li>
-              <li class="card__tag-list-item">#mastereraqus</li>
-              <li class="card__tag-list-item">#english voices</li>
-            </ul>
-            <div class="card__button-bookmark">
-              <button
-                class="bookmark"
-                aria-label="bookmark"
-                type="button"
-                data-js="cardBookmark"
-              >
-                <svg
-                  class="bookmark__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewbox="0 0 24 24"
-                >
-                  <path
-                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-        </li>
-        <!--
-                SECOND CARD
-              -->
-        <li class="card-list__item">
-          <article class="card">
-            <h2 class="card__question">
-              Daniel Radcliffe became a global star in the film industry due to
-              his performance in which film franchise?
-            </h2>
-            <button
-              class="card__button-answer"
-              type="button"
-              data-js="cardToogle2"
-            >
-              Show answer
-            </button>
-            <p class="card__answer" data-js="cardAnswer2">Harry Potter</p>
-            <ul class="card__tag-list">
-              <li class="card__tag-list-item">#danielradcliffe</li>
-              <li class="card__tag-list-item">#hewhomustnotbenamed</li>
-              <li class="card__tag-list-item">#abracadabra</li>
-            </ul>
-            <div class="card__button-bookmark">
-              <button
-                class="bookmark bookmark--active"
-                aria-label="bookmark"
-                type="button"
-                data-js="cardBookmark2"
-              >
-                <svg
-                  class="bookmark__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewbox="0 0 24 24"
-                >
-                  <path
-                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-        </li>
-        <!--
-                THIRD CARD
-              -->
-        <li class="card-list__item">
-          <article class="card">
-            <h2 class="card__question">
-              Which former US president was nicknamed &quot;Teddy&quot; after he
-              refused to shoot a defenseless black bear?
-            </h2>
-            <button
-              class="card__button-answer"
-              type="button"
-              data-js="cardToogle3"
-            >
-              Show answer
-            </button>
-            <p class="card__answer" data-js="cardAnswer3">Theodore Roosevelt</p>
-            <ul class="card__tag-list">
-              <li class="card__tag-list-item">#usa</li>
-              <li class="card__tag-list-item">#president</li>
-              <li class="card__tag-list-item">#teddybear</li>
-            </ul>
-            <div class="card__button-bookmark">
-              <button class="bookmark" aria-label="bookmark" type="button">
-                <svg
-                  class="bookmark__icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewbox="0 0 24 24"
-                  data-js="cardBookmark3"
-                >
-                  <path
-                    d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </article>
-        </li>
-      </ul>
+      <form class="new-card__form">
+        <label for="new-card__question">Your question:</label>
+        <textarea id="new-card__question"></textarea>
+
+        <label for="new-card__answer">Your answer:</label>
+        <textarea id="new-card__answer"></textarea>
+
+        <label for="new-card__tag">Tag:</label>
+        <input type="text" id="new-card__tag"></input>
+
+        <button type="submit" class="new-card__button-answer">Submit</button>
+      </form>
     </main>
 
     <nav class="navigation">
@@ -183,15 +71,12 @@
             href="form.html"
             aria-label="go to form page"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewbox="0 0 24 24"
-              width="24px"
-            >
-              <path
-                d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"
-              />
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-diamond-plus">
+            <path d="M12 8v8" fill="None"/>
+            <path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0z" fill="None"/>
+            <path d="M8 12h8" fill="None"/>
+         </svg>
+ 
             </svg>
           </a>
         </li>
