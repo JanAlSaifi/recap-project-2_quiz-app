@@ -17,13 +17,13 @@
     <main>
       <form class="new-card__form">
         <label for="new-card__question">Your question:</label>
-        <textarea id="new-card__question"></textarea>
-
+        <textarea name="new-card__question" data-js="newCardQuestion" maxlength="150" placeholder="Tell us your question!"></textarea>
+        <p class="maxlength-textarea" data-js="maxlength-textarea"></p>
         <label for="new-card__answer">Your answer:</label>
-        <textarea id="new-card__answer"></textarea>
-
+        <textarea name="new-card__answer" data-js="newCardAnswer" maxlength="150" placeholder="And the answer!"></textarea>
+        <p class="maxlength-textarea" data-js="maxlength-textarea"></p>
         <label for="new-card__tag">Tag:</label>
-        <input type="text" id="new-card__tag"></input>
+        <input type="text" name="new-card__tag" data-js="newCardTag" placeholder="Type # before typing your word!"></input>
 
         <button type="submit" class="new-card__button-answer" data-js="newCardSubmit">Submit</button>
       </form>
