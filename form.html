@@ -7,11 +7,13 @@
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="index.js" defer></script>
+    <script src="form.js" defer></script>
   </head>
   <body>
     <header class="header">
       <h1 class="header__title">Quiz-App</h1>
     </header>
+
     <main>
       <form class="new-card__form">
         <label for="new-card__question">Your question:</label>
@@ -23,8 +25,9 @@
         <label for="new-card__tag">Tag:</label>
         <input type="text" id="new-card__tag"></input>
 
-        <button type="submit" class="new-card__button-answer">Submit</button>
+        <button type="submit" class="new-card__button-answer" data-js="newCardSubmit">Submit</button>
       </form>
+
     </main>
 
     <nav class="navigation">
